@@ -1,0 +1,92 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url(https://static.moydom.ru/st1/1200/zgpjamr4/1500376832596def00b4c59.jpg) center no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sticker {
+    position: absolute;
+    padding: 20px;
+    font-style: italic;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #333;
+    font-size: 15px;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    transition: border ease 0.2s, box-shadow ease 0.2s;
+}
+
+.sticker:focus {
+    border: 2px solid #000;
+    box-shadow: 0 0 3px #000;
+}
+.sticker.hide {
+    opacity: 0;
+}
+.info {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+}
+.info__icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 23px;
+    position: relative;
+    z-index: 2;
+}
+.info__body {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(54, 54, 54);
+    padding: 25px 5px 35px 20px;
+    width: 250px;
+    border-radius: 0 0 18px 0;
+    box-shadow: 0 0 4px rgb(0, 0, 0);
+}
+.info__body:target {
+    display: block;
+}
+.info__close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.info__text {
+    padding-right: 10px;
+    color: #fff;
+}
+.info__text p {
+    margin-bottom: 10px;
+}
+.info__text p:last-child {
+    margin-bottom: 0;
+}
